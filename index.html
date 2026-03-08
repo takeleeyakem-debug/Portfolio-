@@ -3,53 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascenda Marketplace - Ethiopian Digital Creators Platform</title>
+    <title>Ascenda Marketplace - Ethiopia's Futuristic Digital Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
-            <div class="nav-right">
-                <select id="languageToggle" class="language-select">
-                    <option value="en">English</option>
-                    <option value="am">አማርኛ</option>
-                </select>
-            </div>
-        </nav>
+<body class="dark-theme">
+    <!-- Animated Background -->
+    <div class="gradient-bg">
+        <div class="gradient-sphere"></div>
+        <div class="gradient-sphere-2"></div>
+    </div>
 
-        <div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(30,144,255,0.3)), url('https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg');">
-            <div class="hero-content">
-                <h1 id="heroTitle">Ascenda Marketplace</h1>
-                <h2 id="heroSubtitle">Empowering Ethiopian Digital Creators</h2>
-                <p id="heroText">The first local platform for buying and selling digital products in Ethiopia</p>
-                <div class="cta-buttons">
-                    <a href="signup.html" class="btn btn-primary" id="signupBtn">Sign Up</a>
-                    <a href="login.html" class="btn btn-secondary" id="loginBtn">Login</a>
-                    <a href="marketplace.html" class="btn btn-outline" id="marketplaceBtn">View Marketplace</a>
+    <!-- Navigation -->
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200&auto=format&fit=crop" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
+            <div class="nav-right">
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
+                </select>
+                <a href="login.html" class="neon-btn-outline">Login</a>
+                <a href="signup.html" class="neon-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge neon-text">✨ Ethiopia's #1 Digital Marketplace</div>
+            <h1 class="hero-title gradient-text" id="heroTitle">Ascenda Marketplace</h1>
+            <h2 class="hero-subtitle" id="heroSubtitle">የኢትዮጵያ ዲጂታል ገበያ</h2>
+            <p class="hero-description" id="heroDesc">
+                Empowering Ethiopian creators to sell digital products globally. 
+                No platform? We built it. Join the future of digital commerce.
+            </p>
+            <div class="hero-cta">
+                <a href="signup.html" class="neon-btn-glow" id="getStartedBtn">Get Started →</a>
+                <a href="marketplace.html" class="neon-btn-outline-glow" id="exploreBtn">Explore Marketplace</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label" id="creatorsStat">Creators</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label" id="productsStat">Products</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10k+</span>
+                    <span class="stat-label" id="buyersStat">Happy Buyers</span>
                 </div>
             </div>
         </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&auto=format&fit=crop" alt="Digital Creator" class="floating">
+            <div class="hero-image-glow"></div>
+        </div>
+    </section>
 
-        <div class="features">
-            <div class="feature-card">
-                <h3 id="feature1Title">Sell Locally</h3>
-                <p id="feature1Text">Reach Ethiopian customers directly</p>
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title gradient-text" id="featuresTitle">Why Choose Ascenda?</h2>
+        <p class="section-subtitle" id="featuresSubtitle">The future of digital commerce in Ethiopia</p>
+        
+        <div class="features-grid">
+            <div class="feature-card futuristic-card">
+                <div class="feature-icon neon-glow">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 id="feature1Title">Sell Digital Products</h3>
+                <p id="feature1Desc">E-books, courses, templates, and more. Reach customers worldwide instantly.</p>
             </div>
-            <div class="feature-card">
-                <h3 id="feature2Title">Easy Product Listing</h3>
-                <p id="feature2Text">List your digital products in minutes</p>
+            
+            <div class="feature-card futuristic-card">
+                <div class="feature-icon neon-glow">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h3 id="feature2Title">Lightning Fast</h3>
+                <p id="feature2Desc">Instant uploads, seamless checkout, and immediate downloads for buyers.</p>
             </div>
-            <div class="feature-card">
-                <h3 id="feature3Title">Buyer Marketplace</h3>
-                <p id="feature3Text">Discover unique Ethiopian digital content</p>
+            
+            <div class="feature-card futuristic-card">
+                <div class="feature-icon neon-glow">
+                    <i class="fas fa-shield-hal"></i>
+                </div>
+                <h3 id="feature3Title">Secure Transactions</h3>
+                <p id="feature3Desc">Your earnings and data are protected with blockchain-level security.</p>
             </div>
-            <div class="feature-card">
+            
+            <div class="feature-card futuristic-card">
+                <div class="feature-icon neon-glow">
+                    <i class="fas fa-language"></i>
+                </div>
                 <h3 id="feature4Title">Bilingual Support</h3>
-                <p id="feature4Text">English and Amharic interface</p>
+                <p id="feature4Desc">Full support for English and Amharic. Connect in your preferred language.</p>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2 class="section-title gradient-text" id="howTitle">How It Works</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <i class="fas fa-user-plus"></i>
+                <h4 id="step1Title">Create Account</h4>
+                <p id="step1Desc">Sign up as a seller or buyer in seconds</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <i class="fas fa-upload"></i>
+                <h4 id="step2Title">List Products</h4>
+                <p id="step2Desc">Upload your digital products with ease</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <i class="fas fa-shopping-cart"></i>
+                <h4 id="step3Title">Start Selling</h4>
+                <p id="step3Desc">Earn money from your creations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Preview -->
+    <section class="featured-products">
+        <h2 class="section-title gradient-text" id="featuredTitle">Trending Now</h2>
+        <div class="products-grid" id="featuredGrid">
+            <!-- JS will populate -->
+        </div>
+        <div class="center-btn">
+            <a href="marketplace.html" class="neon-btn-outline-glow" id="viewAllBtn">View All Products →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="futuristic-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=100" alt="Ascenda" class="footer-logo">
+                <p>Ethiopia's premier digital marketplace for creators and buyers.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-telegram neon-hover"></i></a>
+                    <a href="#"><i class="fab fa-twitter neon-hover"></i></a>
+                    <a href="#"><i class="fab fa-instagram neon-hover"></i></a>
+                    <a href="#"><i class="fab fa-linkedin neon-hover"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#">About Us</a>
+                <a href="#">Help Center</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-section">
+                <h4>For Creators</h4>
+                <a href="#">How to Sell</a>
+                <a href="#">Success Stories</a>
+                <a href="#">Creator Tools</a>
+                <a href="#">Pricing</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ascenda Marketplace. All rights reserved. | Made with ❤️ in Ethiopia</p>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

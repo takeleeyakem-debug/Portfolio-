@@ -5,60 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Ascenda Marketplace</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+<body class="dark-theme">
+    <div class="gradient-bg"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+            </div>
             <div class="nav-right">
-                <select id="languageToggle" class="language-select">
-                    <option value="en">English</option>
-                    <option value="am">አማርኛ</option>
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
                 </select>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="form-container">
-            <h2 id="signupTitle">Create Account</h2>
-            <form id="signupForm">
+    <div class="auth-container">
+        <div class="auth-card futuristic-card">
+            <div class="auth-header">
+                <h1 class="gradient-text" id="signupTitle">Create Account</h1>
+                <p id="signupSubtitle">Join Ethiopia's fastest growing digital marketplace</p>
+            </div>
+
+            <form id="signupForm" class="auth-form">
                 <div class="form-group">
-                    <label for="fullName" id="fullNameLabel">Full Name</label>
-                    <input type="text" id="fullName" required>
+                    <label for="fullName">
+                        <i class="fas fa-user"></i>
+                        <span id="fullNameLabel">Full Name</span>
+                    </label>
+                    <input type="text" id="fullName" placeholder="John Doe" required class="neon-input">
                 </div>
+
                 <div class="form-group">
-                    <label for="email" id="emailLabel">Email</label>
-                    <input type="email" id="email" required>
+                    <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        <span id="emailLabel">Email Address</span>
+                    </label>
+                    <input type="email" id="email" placeholder="john@example.com" required class="neon-input">
                 </div>
+
                 <div class="form-group">
-                    <label for="phone" id="phoneLabel">Phone</label>
-                    <input type="tel" id="phone" required>
+                    <label for="phone">
+                        <i class="fas fa-phone"></i>
+                        <span id="phoneLabel">Phone Number</span>
+                    </label>
+                    <input type="tel" id="phone" placeholder="+251 912 345 678" required class="neon-input">
                 </div>
+
                 <div class="form-group">
-                    <label for="password" id="passwordLabel">Password</label>
-                    <input type="password" id="password" required>
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        <span id="passwordLabel">Password</span>
+                    </label>
+                    <input type="password" id="password" placeholder="••••••••" required class="neon-input">
                 </div>
+
                 <div class="form-group">
-                    <label id="roleLabel">Role</label>
-                    <div class="radio-group">
-                        <label>
-                            <input type="radio" name="role" value="seller" checked> <span id="sellerRole">Seller</span>
+                    <label id="roleLabel">
+                        <i class="fas fa-user-tag"></i>
+                        <span>I want to</span>
+                    </label>
+                    <div class="role-selector">
+                        <label class="role-card">
+                            <input type="radio" name="role" value="seller" checked>
+                            <div class="role-content">
+                                <i class="fas fa-store"></i>
+                                <span id="sellerRole">Sell Products</span>
+                                <small>Start earning today</small>
+                            </div>
                         </label>
-                        <label>
-                            <input type="radio" name="role" value="buyer"> <span id="buyerRole">Buyer</span>
+                        <label class="role-card">
+                            <input type="radio" name="role" value="buyer">
+                            <div class="role-content">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span id="buyerRole">Buy Products</span>
+                                <small>Discover amazing content</small>
+                            </div>
                         </label>
                     </div>
                 </div>
+
                 <div class="form-group">
-                    <label for="language" id="prefLanguageLabel">Preferred Language</label>
-                    <select id="language" class="language-select">
-                        <option value="en">English</option>
-                        <option value="am">አማርኛ</option>
+                    <label for="language">
+                        <i class="fas fa-globe"></i>
+                        <span id="prefLanguageLabel">Preferred Language</span>
+                    </label>
+                    <select id="language" class="neon-select">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="am">🇪🇹 አማርኛ</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary" id="signupSubmitBtn">Sign Up</button>
+
+                <button type="submit" class="neon-btn-glow full-width" id="signupSubmitBtn">
+                    Create Account <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p class="auth-footer">
+                    <span id="haveAccount">Already have an account?</span>
+                    <a href="login.html" class="neon-link" id="loginLink">Sign In</a>
+                </p>
             </form>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

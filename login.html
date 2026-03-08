@@ -5,38 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Ascenda Marketplace</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+<body class="dark-theme">
+    <div class="gradient-bg"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+            </div>
             <div class="nav-right">
-                <select id="languageToggle" class="language-select">
-                    <option value="en">English</option>
-                    <option value="am">አማርኛ</option>
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
                 </select>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="form-container">
-            <h2 id="loginTitle">Login to Ascenda</h2>
-            <form id="loginForm">
+    <div class="auth-container">
+        <div class="auth-card futuristic-card">
+            <div class="auth-header">
+                <h1 class="gradient-text" id="loginTitle">Welcome Back</h1>
+                <p id="loginSubtitle">Sign in to continue your journey</p>
+            </div>
+
+            <form id="loginForm" class="auth-form">
                 <div class="form-group">
-                    <label for="emailOrPhone" id="emailOrPhoneLabel">Email or Phone</label>
-                    <input type="text" id="emailOrPhone" required>
+                    <label for="emailOrPhone">
+                        <i class="fas fa-envelope"></i>
+                        <span id="emailOrPhoneLabel">Email or Phone</span>
+                    </label>
+                    <input type="text" id="emailOrPhone" placeholder="john@example.com or +251..." required class="neon-input">
                 </div>
+
                 <div class="form-group">
-                    <label for="password" id="loginPasswordLabel">Password</label>
-                    <input type="password" id="password" required>
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        <span id="loginPasswordLabel">Password</span>
+                    </label>
+                    <input type="password" id="password" placeholder="••••••••" required class="neon-input">
                 </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span id="rememberMe">Remember me</span>
+                    </label>
+                    <a href="#" class="neon-link" id="forgotPassword">Forgot Password?</a>
+                </div>
+
                 <div id="loginError" class="error-message"></div>
-                <button type="submit" class="btn btn-primary" id="loginSubmitBtn">Login</button>
+
+                <button type="submit" class="neon-btn-glow full-width" id="loginSubmitBtn">
+                    Sign In <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p class="auth-footer">
+                    <span id="noAccount">Don't have an account?</span>
+                    <a href="signup.html" class="neon-link" id="signupLink">Create Account</a>
+                </p>
             </form>
-            <p class="form-footer">
-                <span id="noAccountText">Don't have an account?</span> <a href="signup.html" id="signupLink">Sign Up</a>
-            </p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

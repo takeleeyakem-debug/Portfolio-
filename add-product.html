@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Ascenda</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <div class="gradient-bg"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
+            <div class="nav-right">
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
+                </select>
+                <button id="logoutBtn" class="neon-btn-outline-small">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="form-page-container">
+        <div class="form-page-header">
+            <h1 class="gradient-text" id="addProductTitle">Add New Product</h1>
+            <p id="addProductSubtitle">List your digital product on the marketplace</p>
+        </div>
+
+        <div class="form-page-card futuristic-card">
+            <form id="addProductForm" class="product-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="title">
+                            <i class="fas fa-heading"></i>
+                            <span id="titleLabel">Product Title</span>
+                        </label>
+                        <input type="text" id="title" placeholder="e.g., Complete Web Development Course" required class="neon-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">
+                            <i class="fas fa-tag"></i>
+                            <span id="categoryLabel">Category</span>
+                        </label>
+                        <select id="category" class="neon-select" required>
+                            <option value="ebooks">📚 E-books</option>
+                            <option value="courses">🎓 Online Courses</option>
+                            <option value="templates">🎨 Web Templates</option>
+                            <option value="graphics">🖼️ Graphics & Design</option>
+                            <option value="audio">🎵 Audio & Music</option>
+                            <option value="software">💻 Software</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">
+                        <i class="fas fa-align-left"></i>
+                        <span id="descriptionLabel">Description</span>
+                    </label>
+                    <textarea id="description" rows="5" placeholder="Describe your product in detail..." required class="neon-input"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="price">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span id="priceLabel">Price (USD)</span>
+                        </label>
+                        <input type="number" id="price" step="0.01" min="0" placeholder="29.99" required class="neon-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imageUrl">
+                            <i class="fas fa-image"></i>
+                            <span id="imageUrlLabel">Product Image URL</span>
+                        </label>
+                        <input type="url" id="imageUrl" placeholder="https://images.unsplash.com/..." required class="neon-input">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="downloadLink">
+                        <i class="fas fa-download"></i>
+                        <span id="downloadLinkLabel">Download Link</span>
+                    </label>
+                    <input type="url" id="downloadLink" placeholder="https://yourfile.com/product.zip" required class="neon-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="previewVideo">
+                        <i class="fas fa-video"></i>
+                        <span id="previewLabel">Preview Video (Optional)</span>
+                    </label>
+                    <input type="url" id="previewVideo" placeholder="https://youtube.com/..." class="neon-input">
+                </div>
+
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="Preview">
+                </div>
+
+                <button type="submit" class="neon-btn-glow full-width" id="addProductBtn">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span id="publishBtn">Publish Product</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

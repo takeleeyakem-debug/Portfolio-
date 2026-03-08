@@ -3,49 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace - Ascenda Marketplace</title>
+    <title>Marketplace - Ascenda</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
-            <div class="nav-right">
-                <a href="dashboard.html" class="nav-link">← Dashboard</a>
-                <select id="languageToggle" class="language-select">
-                    <option value="en">English</option>
-                    <option value="am">አማርኛ</option>
-                </select>
-            </div>
-        </nav>
+<body class="dark-theme">
+    <div class="gradient-bg"></div>
 
-        <div class="marketplace-filters">
-            <h2 id="marketplaceTitle">Marketplace</h2>
-            <div class="filter-group">
-                <div class="category-tabs">
-                    <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="ebooks">E-books</button>
-                    <button class="filter-btn" data-category="courses">Courses</button>
-                    <button class="filter-btn" data-category="web templates">Web Templates</button>
-                </div>
-                <select id="sortBy" class="sort-select">
-                    <option value="newest">Newest</option>
-                    <option value="priceLow">Price: Low to High</option>
-                    <option value="priceHigh">Price: High to Low</option>
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link active">Marketplace</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
+            <div class="nav-right">
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
                 </select>
+                <a href="login.html" class="neon-btn-outline-small" id="marketplaceLoginBtn">Login</a>
             </div>
         </div>
+    </nav>
 
-        <div id="marketplaceGrid" class="products-grid"></div>
+    <div class="marketplace-header">
+        <h1 class="gradient-text" id="marketplaceTitle">Digital Marketplace</h1>
+        <p id="marketplaceSubtitle">Discover amazing digital products from Ethiopian creators</p>
+    </div>
 
-        <!-- Product Details Modal -->
-        <div id="productModal" class="modal">
-            <div class="modal-content modal-lg">
-                <span class="close">&times;</span>
-                <div id="productDetail"></div>
+    <!-- Filters -->
+    <div class="filters-section futuristic-card">
+        <div class="filter-group">
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all" id="allCategory">All</button>
+                <button class="filter-btn" data-category="ebooks" id="ebooksCategory">E-books</button>
+                <button class="filter-btn" data-category="courses" id="coursesCategory">Courses</button>
+                <button class="filter-btn" data-category="templates" id="templatesCategory">Templates</button>
+                <button class="filter-btn" data-category="graphics" id="graphicsCategory">Graphics</button>
+                <button class="filter-btn" data-category="audio" id="audioCategory">Audio</button>
+            </div>
+            <div class="sort-options">
+                <select id="sortSelect" class="neon-select">
+                    <option value="newest" id="newestOpt">Newest First</option>
+                    <option value="priceLow" id="priceLowOpt">Price: Low to High</option>
+                    <option value="priceHigh" id="priceHighOpt">Price: High to Low</option>
+                    <option value="popular" id="popularOpt">Most Popular</option>
+                </select>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid"><i class="fas fa-th"></i></button>
+                    <button class="view-btn" data-view="list"><i class="fas fa-list"></i></button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Products Grid -->
+    <div class="products-container">
+        <div class="products-grid" id="marketplaceGrid"></div>
+        <div class="loading-spinner" id="loadingSpinner">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content futuristic-card">
+            <span class="close-modal">&times;</span>
+            <div id="productDetail" class="product-detail-container"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

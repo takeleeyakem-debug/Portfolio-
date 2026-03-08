@@ -3,78 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile - Ascenda Marketplace</title>
+    <title>Profile - Ascenda</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <nav class="navbar">
-            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+<body class="dark-theme">
+    <div class="gradient-bg"></div>
+
+    <nav class="navbar glass-effect">
+        <div class="nav-container">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo neon-hover">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </div>
             <div class="nav-right">
-                <a href="dashboard.html" class="nav-link">← Dashboard</a>
-                <select id="languageToggle" class="language-select">
-                    <option value="en">English</option>
-                    <option value="am">አማርኛ</option>
+                <select id="languageToggle" class="neon-select">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="am">🇪🇹 አማርኛ</option>
                 </select>
+                <button id="logoutBtn" class="neon-btn-outline-small">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
             </div>
-        </nav>
-
-        <div class="profile-container">
-            <div class="profile-header">
-                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Profile" id="profileImage" class="profile-image-large">
-                <h2 id="profileName">User Name</h2>
-                <p id="profileRole">Role: <span id="profileRoleValue">-</span></p>
-            </div>
-
-            <div class="profile-details">
-                <div class="detail-item">
-                    <strong>Email:</strong> <span id="profileEmail">-</span>
-                </div>
-                <div class="detail-item">
-                    <strong>Phone:</strong> <span id="profilePhone">-</span>
-                </div>
-                <div class="detail-item">
-                    <strong>Language:</strong> <span id="profileLanguage">-</span>
-                </div>
-                <div class="detail-item balance-highlight">
-                    <strong>Balance:</strong> <span id="profileBalance">$0</span>
-                </div>
-            </div>
-
-            <div class="transaction-history">
-                <h3>Transaction History</h3>
-                <div id="transactionList"></div>
-            </div>
-
-            <button id="editProfileBtn" class="btn btn-primary">Edit Profile</button>
         </div>
+    </nav>
 
-        <!-- Edit Profile Modal -->
-        <div id="editProfileModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h3>Edit Profile</h3>
-                <form id="editProfileForm">
-                    <div class="form-group">
-                        <label for="editProfileName">Full Name</label>
-                        <input type="text" id="editProfileName" required>
+    <div class="profile-container">
+        <div class="profile-grid">
+            <!-- Left Column -->
+            <div class="profile-left">
+                <div class="profile-card futuristic-card">
+                    <div class="profile-image-container">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200" alt="Profile" id="profileImage" class="profile-image-large">
+                        <button class="change-photo-btn" id="changePhotoBtn">
+                            <i class="fas fa-camera"></i>
+                        </button>
                     </div>
-                    <div class="form-group">
-                        <label for="editProfileImage">Profile Image URL</label>
-                        <input type="url" id="editProfileImage">
+                    <h2 id="profileName">User Name</h2>
+                    <p class="profile-role" id="profileRoleDisplay">Role: <span id="profileRole">-</span></p>
+                    <div class="profile-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span id="verifiedStatus">Verified Creator</span>
                     </div>
-                    <div class="form-group">
-                        <label for="editProfileLanguage">Preferred Language</label>
-                        <select id="editProfileLanguage">
-                            <option value="en">English</option>
-                            <option value="am">አማርኛ</option>
-                        </select>
+                </div>
+
+                <div class="stats-card futuristic-card">
+                    <h3 id="statsTitle">Statistics</h3>
+                    <div class="stat-item">
+                        <span id="totalProductsStat">Total Products</span>
+                        <span class="stat-value" id="totalProductsValue">0</span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                </form>
+                    <div class="stat-item">
+                        <span id="totalSalesStat">Total Sales</span>
+                        <span class="stat-value" id="totalSalesValue">$0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span id="ratingStat">Average Rating</span>
+                        <span class="stat-value">⭐ 4.8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="profile-right">
+                <div class="info-card futuristic-card">
+                    <h3 id="personalInfoTitle">Personal Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>📧 <span id="emailLabel">Email</span></label>
+                            <p id="profileEmail">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>📞 <span id="phoneLabel">Phone</span></label>
+                            <p id="profilePhone">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>🌐 <span id="languageLabel">Language</span></label>
+                            <p id="profileLanguage">-</p>
+                        </div>
+                        <div class="info-item">
+                            <label>💰 <span id="balanceLabel">Balance</span></label>
+                            <p class="balance-amount" id="profileBalance">$0</p>
+                        </div>
+                    </div>
+                    <button class="neon-btn-outline full-width" id="editProfileBtn">
+                        <i class="fas fa-edit"></i> <span id="editProfileText">Edit Profile</span>
+                    </button>
+                </div>
+
+                <div class="transaction-card futuristic-card">
+                    <h3 id="transactionTitle">Transaction History</h3>
+                    <div class="transaction-list" id="transactionList"></div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content futuristic-card">
+            <span class="close-modal">&times;</span>
+            <h2 class="gradient-text" id="editProfileTitle">Edit Profile</h2>
+            <form id="editProfileForm" class="profile-form">
+                <div class="form-group">
+                    <label for="editProfileName">Full Name</label>
+                    <input type="text" id="editProfileName" required class="neon-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="editProfileImage">Profile Image URL</label>
+                    <input type="url" id="editProfileImage" class="neon-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="editProfileEmail">Email</label>
+                    <input type="email" id="editProfileEmail" class="neon-input" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="editProfilePhone">Phone</label>
+                    <input type="tel" id="editProfilePhone" class="neon-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="editProfileLanguage">Preferred Language</label>
+                    <select id="editProfileLanguage" class="neon-select">
+                        <option value="en">🇬🇧 English</option>
+                        <option value="am">🇪🇹 አማርኛ</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="neon-btn-glow full-width">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
