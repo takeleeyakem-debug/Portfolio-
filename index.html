@@ -3,192 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eyakem · digital templates & products</title>
-    <!-- external CSS & JS (separate files) -->
+    <title>Ascenda Marketplace - Ethiopian Digital Creators Platform</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for clean icons (loaded locally but CDN is fine) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- HERO / HOME SECTION -->
-    <section class="section-hero" id="home">
-        <div class="container hero-grid">
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(30,144,255,0.3)), url('https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg');">
             <div class="hero-content">
-                <h1>Web Templates & <span class="hero-highlight">Digital Products</span> for Startups</h1>
-                <p class="hero-sub">Modern, responsive, ready-to-use templates — launch faster with pixel-perfect design.</p>
-                <div class="cta-group">
-                    <a href="https://t.me/webtemplatecheap" class="btn btn-primary" target="_blank"><i class="fab fa-telegram-plane" style="margin-right: 8px;"></i>Direct DM</a>
-                    <a href="https://t.me/webtemplate2" class="btn btn-accent" target="_blank"><i class="fab fa-telegram"></i> Telegram channel</a>
-                    <a href="#contact" class="btn btn-outline">All contacts</a>
-                </div>
-            </div>
-            <div class="hero-graphic"></div>
-        </div>
-    </section>
-
-    <!-- ABOUT ME SECTION (Eyakem) -->
-    <section class="section-about" id="about">
-        <div class="container about-grid">
-            <div class="about-img">
-                <div class="photo-placeholder">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <p style="margin-top: 12px; color: #0d6efd;"><i class="fas fa-camera"></i> @webtemplate2 (Eyakem)</p>
-            </div>
-            <div class="about-text">
-                <h2>👋 I'm <span>Eyakem</span> — digital seller & template crafter</h2>
-                <p style="font-size: 1.1rem; margin-bottom: 20px;">I’ve been designing and coding web templates for 4+ years. My mission: help founders, freelancers, and startups launch beautiful websites without breaking the bank. Every template is hand-coded with performance and flexibility in mind.</p>
-                <p>Skills: HTML/CSS, responsive design, JavaScript, Payhip integration, and UI/UX. I also create UI kits, landing page blueprints, and startup assets.</p>
-                <!-- timeline mini -->
-                <div class="timeline-mini">
-                    <div class="timeline-item"><span class="timeline-year">2021</span> <div class="timeline-desc">first template sold</div></div>
-                    <div class="timeline-item"><span class="timeline-year">2022</span> <div class="timeline-desc">500+ customers</div></div>
-                    <div class="timeline-item"><span class="timeline-year">2024</span> <div class="timeline-desc">featured on Product Hunt</div></div>
+                <h1 id="heroTitle">Ascenda Marketplace</h1>
+                <h2 id="heroSubtitle">Empowering Ethiopian Digital Creators</h2>
+                <p id="heroText">The first local platform for buying and selling digital products in Ethiopia</p>
+                <div class="cta-buttons">
+                    <a href="signup.html" class="btn btn-primary" id="signupBtn">Sign Up</a>
+                    <a href="login.html" class="btn btn-secondary" id="loginBtn">Login</a>
+                    <a href="marketplace.html" class="btn btn-outline" id="marketplaceBtn">View Marketplace</a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- PORTFOLIO / PRODUCTS SECTION (updated with pricing & delivery) -->
-    <section class="section-portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>✨ recent <span>templates</span> & products</h2>
-                <p style="color: #4a4a4a; max-width: 600px; margin: 0 auto;">Landing page templates <strong>from 10+ USDT</strong> · Full sites <strong>from 50+ USDT</strong> · delivery: templates less than 24h, full site 1-2 days</p>
+        <div class="features">
+            <div class="feature-card">
+                <h3 id="feature1Title">Sell Locally</h3>
+                <p id="feature1Text">Reach Ethiopian customers directly</p>
             </div>
-            <div class="portfolio-grid">
-                <!-- card 1 - landing page template (under 50) -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-laptop-code fa-3x" style="color:#0d6efd;"></i></div>
-                    <h3 class="product-title">Startup Pro</h3>
-                    <p class="product-desc">SaaS landing page, 5 sections + dark mode. Figma & HTML. <strong>⏱️ delivery &lt;24h</strong></p>
-                    <div class="price-row">
-                        <span class="price">29 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">Buy →</a>
-                    </div>
-                </div>
-                <!-- card 2 - landing page template -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-mobile-alt fa-3x" style="color:#00d1b2;"></i></div>
-                    <h3 class="product-title">AppShowcase</h3>
-                    <p class="product-desc">Mobile app landing, interactive elements, animated. <strong>⏱️ delivery &lt;24h</strong></p>
-                    <div class="price-row">
-                        <span class="price">19 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">DM to buy</a>
-                    </div>
-                </div>
-                <!-- card 3 - full site (above 50) -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-store fa-3x" style="color:#0d6efd;"></i></div>
-                    <h3 class="product-title">EcoStore UI</h3>
-                    <p class="product-desc">E-commerce full site, product grid, cart, blog. <strong>⏱️ 1-2 days delivery</strong></p>
-                    <div class="price-row">
-                        <span class="price">65 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">Buy</a>
-                    </div>
-                </div>
-                <!-- card 4 - full site (above 50) -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-newspaper fa-3x" style="color:#00d1b2;"></i></div>
-                    <h3 class="product-title">Agency Kit</h3>
-                    <p class="product-desc">Portfolio + blog full site, dark/light, 6 pages. <strong>⏱️ 1-2 days delivery</strong></p>
-                    <div class="price-row">
-                        <span class="price">79 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">DM</a>
-                    </div>
-                </div>
-                <!-- card 5 - extra landing template (added to show range) -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-rocket fa-3x" style="color:#0d6efd;"></i></div>
-                    <h3 class="product-title">SaaS Kit</h3>
-                    <p class="product-desc">High-converting landing page, waitlist, features. <strong>⏱️ delivery &lt;24h</strong></p>
-                    <div class="price-row">
-                        <span class="price">24 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">Buy</a>
-                    </div>
-                </div>
-                <!-- card 6 - full site -->
-                <div class="product-card">
-                    <div class="card-img"><i class="fas fa-chart-line fa-3x" style="color:#00d1b2;"></i></div>
-                    <h3 class="product-title">Dashboard Pro</h3>
-                    <p class="product-desc">Admin & analytics full site, 10+ pages. <strong>⏱️ 1-2 days delivery</strong></p>
-                    <div class="price-row">
-                        <span class="price">89 USDT</span>
-                        <a href="#" class="btn-small js-buy-demo">DM</a>
-                    </div>
-                </div>
+            <div class="feature-card">
+                <h3 id="feature2Title">Easy Product Listing</h3>
+                <p id="feature2Text">List your digital products in minutes</p>
             </div>
-            <!-- additional info line under grid -->
-            <p style="text-align: center; margin-top: 40px; color:#0d6efd; font-weight: 500;"><i class="fas fa-clock"></i> All templates: less than 24h delivery · Full custom sites: 1-2 days · Prices in USDT (crypto)</p>
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION (direct links + optional form) -->
-    <section class="section-contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>📬 let’s <span>connect</span> & work together</h2>
-                <p>fastest replies via Telegram DM, follow me for free resources</p>
+            <div class="feature-card">
+                <h3 id="feature3Title">Buyer Marketplace</h3>
+                <p id="feature3Text">Discover unique Ethiopian digital content</p>
             </div>
-            <div class="contact-flex">
-                <div class="contact-links">
-                    <h3>Direct contact</h3>
-                    <!-- TikTok -->
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-tiktok"></i></div>
-                        <a href="https://tiktok.com/@webtemplate2" target="_blank">@webtemplate2</a>
-                    </div>
-                    <!-- Telegram channel -->
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-telegram-plane"></i></div>
-                        <a href="https://t.me/webtemplate2" target="_blank">t.me/webtemplate2 (channel)</a>
-                    </div>
-                    <!-- Telegram DM -->
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fab fa-telegram"></i></div>
-                        <a href="https://t.me/webtemplatecheap" target="_blank">@webtemplatecheap (DM)</a>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <p style="color:#0d6efd;"><i class="fas fa-check-circle" style="color:#00d1b2;"></i>  Instant DM — I’m active 24/7</p>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3 style="margin-bottom: 18px;">or quick message</h3>
-                    <form id="realContactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Your email (optional)">
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" rows="3" placeholder="Which template? or say hi..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-form"><i class="fab fa-telegram"></i> Send message</button>
-                    </form>
-                    <p id="formFeedback" style="margin-top: 12px; font-size:0.95rem; color:#00d1b2;"></p>
-                </div>
+            <div class="feature-card">
+                <h3 id="feature4Title">Bilingual Support</h3>
+                <p id="feature4Text">English and Amharic interface</p>
             </div>
         </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div style="font-weight: 300;">© 2025 Eyakem · webtemplate2 · All templates ready to use</div>
-                <div class="footer-social">
-                    <a href="https://tiktok.com/@webtemplate2" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://t.me/webtemplate2" target="_blank" aria-label="Telegram channel"><i class="fab fa-telegram"></i></a>
-                    <a href="https://t.me/webtemplatecheap" target="_blank" aria-label="DM"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-            </div>
-            <hr>
-            <p style="font-size: 0.9rem; opacity:0.6;"><i class="fas fa-code"></i> modern templates for startups · delivery: templates &lt;24h, full sites 1-2 days · prices in USDT</p>
-        </div>
-    </footer>
-
-    <!-- external script (script.js) -->
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

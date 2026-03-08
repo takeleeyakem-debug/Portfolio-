@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2 id="loginTitle">Login to Ascenda</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="emailOrPhone" id="emailOrPhoneLabel">Email or Phone</label>
+                    <input type="text" id="emailOrPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" id="loginPasswordLabel">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div id="loginError" class="error-message"></div>
+                <button type="submit" class="btn btn-primary" id="loginSubmitBtn">Login</button>
+            </form>
+            <p class="form-footer">
+                <span id="noAccountText">Don't have an account?</span> <a href="signup.html" id="signupLink">Sign Up</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=50" alt="Profile" class="profile-icon" id="profileIcon">
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+
+        <div class="dashboard">
+            <div class="profile-summary" id="profileSummary">
+                <h3 id="welcomeUser">Welcome, <span id="userName">User</span>!</h3>
+                <p id="userRole">Role: <span id="userRoleValue">-</span></p>
+                <p id="userBalance">Balance: <span id="balanceValue">$0</span></p>
+            </div>
+
+            <div class="dashboard-grid">
+                <a href="add_product.html" class="dashboard-card" id="addProductCard">
+                    <h4>➕ Add Product</h4>
+                </a>
+                <a href="my_products.html" class="dashboard-card" id="myProductsCard">
+                    <h4>📦 My Products</h4>
+                </a>
+                <a href="marketplace.html" class="dashboard-card" id="marketplaceCard">
+                    <h4>🛒 Marketplace</h4>
+                </a>
+                <a href="profile.html" class="dashboard-card" id="profileCard">
+                    <h4>👤 Profile</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

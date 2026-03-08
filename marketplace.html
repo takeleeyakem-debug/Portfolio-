@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <a href="dashboard.html" class="nav-link">← Dashboard</a>
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="marketplace-filters">
+            <h2 id="marketplaceTitle">Marketplace</h2>
+            <div class="filter-group">
+                <div class="category-tabs">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="ebooks">E-books</button>
+                    <button class="filter-btn" data-category="courses">Courses</button>
+                    <button class="filter-btn" data-category="web templates">Web Templates</button>
+                </div>
+                <select id="sortBy" class="sort-select">
+                    <option value="newest">Newest</option>
+                    <option value="priceLow">Price: Low to High</option>
+                    <option value="priceHigh">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="marketplaceGrid" class="products-grid"></div>
+
+        <!-- Product Details Modal -->
+        <div id="productModal" class="modal">
+            <div class="modal-content modal-lg">
+                <span class="close">&times;</span>
+                <div id="productDetail"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

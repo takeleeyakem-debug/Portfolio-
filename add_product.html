@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <a href="dashboard.html" class="nav-link" id="backToDashboard">← Dashboard</a>
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2 id="addProductTitle">Add New Product</h2>
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="title" id="titleLabel">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="category" id="categoryLabel">Category</label>
+                    <select id="category" required>
+                        <option value="ebooks">E-books</option>
+                        <option value="courses">Courses</option>
+                        <option value="web templates">Web Templates</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description" id="descriptionLabel">Description</label>
+                    <textarea id="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="price" id="priceLabel">Price ($)</label>
+                    <input type="number" id="price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="imageUrl" id="imageUrlLabel">Image URL</label>
+                    <input type="url" id="imageUrl" value="https://images.unsplash.com/photo-1581092795364-8aea94d545d4" required>
+                </div>
+                <div class="form-group">
+                    <label for="downloadLink" id="downloadLinkLabel">Download Link</label>
+                    <input type="url" id="downloadLink" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="addProductBtn">Add Product</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

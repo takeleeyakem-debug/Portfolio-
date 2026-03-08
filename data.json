@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Demo Seller",
+      "email": "seller@demo.com",
+      "phone": "1234567890",
+      "password": "password",
+      "role": "seller",
+      "language": "en",
+      "verified": true,
+      "balance": 1000,
+      "profile_pic": "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+    },
+    {
+      "id": 2,
+      "name": "Demo Buyer",
+      "email": "buyer@demo.com",
+      "phone": "0987654321",
+      "password": "password",
+      "role": "buyer",
+      "language": "en",
+      "verified": true,
+      "balance": 500,
+      "profile_pic": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "seller_id": 1,
+      "title": "Web Development Course",
+      "category": "courses",
+      "description": "Complete web development course for beginners",
+      "price": 49.99,
+      "image": "https://images.unsplash.com/photo-1581092795364-8aea94d545d4",
+      "download_link": "https://example.com/download1"
+    },
+    {
+      "id": 2,
+      "seller_id": 1,
+      "title": "E-book: Ethiopian History",
+      "category": "ebooks",
+      "description": "Comprehensive guide to Ethiopian history",
+      "price": 19.99,
+      "image": "https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg",
+      "download_link": "https://example.com/download2"
+    }
+  ],
+  "transactions": []
+}

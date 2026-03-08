@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <a href="dashboard.html" class="nav-link">← Dashboard</a>
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150" alt="Profile" id="profileImage" class="profile-image-large">
+                <h2 id="profileName">User Name</h2>
+                <p id="profileRole">Role: <span id="profileRoleValue">-</span></p>
+            </div>
+
+            <div class="profile-details">
+                <div class="detail-item">
+                    <strong>Email:</strong> <span id="profileEmail">-</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Phone:</strong> <span id="profilePhone">-</span>
+                </div>
+                <div class="detail-item">
+                    <strong>Language:</strong> <span id="profileLanguage">-</span>
+                </div>
+                <div class="detail-item balance-highlight">
+                    <strong>Balance:</strong> <span id="profileBalance">$0</span>
+                </div>
+            </div>
+
+            <div class="transaction-history">
+                <h3>Transaction History</h3>
+                <div id="transactionList"></div>
+            </div>
+
+            <button id="editProfileBtn" class="btn btn-primary">Edit Profile</button>
+        </div>
+
+        <!-- Edit Profile Modal -->
+        <div id="editProfileModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Edit Profile</h3>
+                <form id="editProfileForm">
+                    <div class="form-group">
+                        <label for="editProfileName">Full Name</label>
+                        <input type="text" id="editProfileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProfileImage">Profile Image URL</label>
+                        <input type="url" id="editProfileImage">
+                    </div>
+                    <div class="form-group">
+                        <label for="editProfileLanguage">Preferred Language</label>
+                        <select id="editProfileLanguage">
+                            <option value="en">English</option>
+                            <option value="am">አማርኛ</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

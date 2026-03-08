@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2 id="signupTitle">Create Account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="fullName" id="fullNameLabel">Full Name</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" id="emailLabel">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" id="phoneLabel">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" id="passwordLabel">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label id="roleLabel">Role</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="role" value="seller" checked> <span id="sellerRole">Seller</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="buyer"> <span id="buyerRole">Buyer</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="language" id="prefLanguageLabel">Preferred Language</label>
+                    <select id="language" class="language-select">
+                        <option value="en">English</option>
+                        <option value="am">አማርኛ</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary" id="signupSubmitBtn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

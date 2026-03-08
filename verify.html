@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Account - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="form-container">
+            <h2 id="verifyTitle">Verify Your Account</h2>
+            <p id="verifyText">Enter the verification code sent to your email/phone (Demo: use 1234)</p>
+            <form id="verifyForm">
+                <div class="form-group">
+                    <label for="code" id="codeLabel">Verification Code</label>
+                    <input type="text" id="code" maxlength="4" placeholder="1234" required>
+                </div>
+                <div id="verifyError" class="error-message"></div>
+                <button type="submit" class="btn btn-primary" id="verifyBtn">Verify</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

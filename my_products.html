@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Products - Ascenda Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <img src="https://images.unsplash.com/photo-1612831663458-bde950c9763d?w=200" alt="Ascenda Logo" class="logo">
+            <div class="nav-right">
+                <a href="dashboard.html" class="nav-link">← Dashboard</a>
+                <a href="add_product.html" class="btn btn-primary" id="addNewBtn">+ Add New</a>
+                <select id="languageToggle" class="language-select">
+                    <option value="en">English</option>
+                    <option value="am">አማርኛ</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="products-header">
+            <h2 id="myProductsTitle">My Products</h2>
+        </div>
+
+        <div id="productsGrid" class="products-grid"></div>
+
+        <!-- Edit Modal -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3 id="editModalTitle">Edit Product</h3>
+                <form id="editForm">
+                    <input type="hidden" id="editProductId">
+                    <div class="form-group">
+                        <label for="editTitle">Title</label>
+                        <input type="text" id="editTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editCategory">Category</label>
+                        <select id="editCategory" required>
+                            <option value="ebooks">E-books</option>
+                            <option value="courses">Courses</option>
+                            <option value="web templates">Web Templates</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDescription">Description</label>
+                        <textarea id="editDescription" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="editPrice">Price ($)</label>
+                        <input type="number" id="editPrice" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editImageUrl">Image URL</label>
+                        <input type="url" id="editImageUrl" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editDownloadLink">Download Link</label>
+                        <input type="url" id="editDownloadLink" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
